@@ -4,24 +4,21 @@ public class PalindromeNumber {
         System.out.println(isPalindrome(Number));
 
     }
-    public static boolean isPalindrome(int originalNumber){
+
+    public static boolean isPalindrome(int originalNumber) {
 
         int tempResult = originalNumber;
         int reversedNumber = 0;
 
         if (originalNumber < 0) {
-            return false ;
+            return false;
         } else {
             while (tempResult > 0) {
                 int remainder = tempResult % 10;
                 reversedNumber = reversedNumber * 10 + remainder;
                 tempResult = tempResult / 10;
             }
-            if (originalNumber == reversedNumber) {
-                return true ;
-            } else {
-                return false ;
-            }
+            return originalNumber == reversedNumber;
         }
     }
 }
